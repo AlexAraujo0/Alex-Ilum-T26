@@ -65,6 +65,8 @@ O projeto está organizado em diferentes diretórios, para evitar repetições d
 | |-> OTM_paralelo.sh
 | |-> OTM_exodia.sh
 | |-> OTM_singular.sh
+| |-> analise.ipynb (gera imagens)
+| |-> candidados.csv
 |
 |--> .gitignore
 |--> LICENSE
@@ -164,7 +166,7 @@ Exemplo: `wtd_mean_Density` é a densidade média ponderada pela composição.
 
 ![Distribuição da temperatura crítica](figuras/distribuicao_alvo.png)
 
-### Consideração
+ **Consideração**:
 
 A busca de hiperparâmetros usa apenas o conjunto de treino associado à validação cruzada de 5 folds, enquanto os conjuntos de validação e teste apenas são usados após a escolha dos modelos.
 
@@ -218,7 +220,9 @@ Todas estas etapas servem para evitar resultados otimistas, garantindo que os al
 
 ## Resultados
 
-Falar, com números, minha conclusão. Pôr imagens também.
+Este é um plot com as medidas finais dos modelos. Percebe-se que o Ridge teve o pior desempenho dentre os algoritmos usados, com apenas 49% das previsões dentro da margem de 10 K. Além disso, apesar do Exodia e do ETR terem erros comparáveis entre si, o custo computacional do primeiro é muito maior que o último, sendo cerca de três vezes mais lento. O erro comparável provavelmente decorre do uso do Ridge, um algoritmo linear, como estimador final, enquanto o custo computacional decorre do uso dos demais 4 algoritmos juntos.
+
+![resultados_gerais](./figuras/previsoes_finais.png)
 
 A análise detalhada, com discussão dos resultados, está no notebook [`main.ipynb`](main.ipynb).
 
