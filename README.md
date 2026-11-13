@@ -226,10 +226,6 @@ Este é um plot com as medidas finais dos modelos. Percebe-se que o Ridge teve o
 
 A análise detalhada, com discussão dos resultados, está no notebook [`main.ipynb`](main.ipynb).
 
-## Finalização
-
-Falar sobre a melhor abordagem para o problema e qual o erro dela.
-
 ### Limitações
 
 * **Divisão aleatória.** Materiais da mesma família química têm composições parecidas e podem cair em conjuntos diferentes, o que torna as métricas mais otimistas para materiais realmente novos. Futuramente, será usado KFold estratificado por grupos para contornar este problema.
